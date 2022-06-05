@@ -1,0 +1,35 @@
+
+
+
+
+ 
+
+.entirePage{
+	background-image: url('https://symbols.getvecta.com/stencil_101/94_wyre-icon.c317892e2d.svg');
+width: 100%;
+height: 186rem;
+}
+
+.mainCalls{
+	position: absolute;
+    top: 58rem;
+}
+
+.row1{
+	
+	position: absolute;
+	top: -4rem;
+	left: 12rem;
+
+}
+
+.row2{
+	position: absolute;
+	top: -10rem;
+	left: 6rem;
+}
+
+.mainPosts{
+	position: absolute;
+	top: 3rem;
+}

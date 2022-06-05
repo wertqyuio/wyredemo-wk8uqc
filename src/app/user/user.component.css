@@ -1,0 +1,83 @@
+.firstName{
+  font-weight: bold;
+  color:black;
+  font-size: 1.4em;
+
+}
+
+.lasttName{
+  font-weight: bold;
+  color:black;
+  font-size: 1.4em;
+
+}
+
+
+.DOB{
+  font-weight: bold;
+  color:black;
+  font-size: 1.4em;
+
+}
+
+.firstNameInput{
+  
+  position: absolute;
+  left: 13rem;
+  right: 4rem;
+  /* display: table-caption; */
+  /* height: 50px; */
+  /* width: 100%; */
+  background-color: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  /* padding: 0 10px; */
+  /* margin-top: 8px; */
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+
+
+}
+
+.lastNameInput{
+  
+  position: absolute;
+  left: 13rem;
+  right: 4rem;
+  /* display: table-caption; */
+  /* height: 50px; */
+  /* width: 100%; */
+  background-color: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  /* padding: 0 10px; */
+  /* margin-top: 8px; */
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+
+
+}
+
+.dateOfBirthInput{
+  
+  position: absolute;
+  left: 13rem;
+  right: 4rem;
+  /* display: table-caption; */
+  /* height: 50px; */
+  /* width: 100%; */
+  background-color: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  /* padding: 0 10px; */
+  /* margin-top: 8px; */
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+
+}

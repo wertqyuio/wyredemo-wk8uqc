@@ -1,0 +1,81 @@
+<div class="usersRegister">
+  <!-- <h3 class="reg">Register User</h3> -->
+
+  <div class="users-text-center">
+    <div class="deconstructed">
+      Register a User
+      <div>Register a User</div>
+      <div>Register a User</div>
+      <div>Register a User</div>
+      <div>Register a User</div>
+    </div>
+  </div>
+  
+  <div class="formContainer">
+    <form (ngSubmit)="onSubmit()" [formGroup]="employeeForm">
+
+
+    <app-user [group]="$any(employeeForm).controls.fields"></app-user>
+    <!-- <app-user [group]="$any(employeeForm).controls.residenceAddress"></app-user> -->
+
+    <div class="form-group">
+    <label class="blockchains" for="blockchains">blockchains</label>
+    <input type="text" formControlName="blockchains" class="blockchainsInput" required/>
+    </div><br/>
+    <div class="form-group">
+    <label class="immediate" for="immediate">immediate</label>
+    <input type="text" formControlName="immediate" class="immediateInput" required/>
+    </div>
+    <br/>
+    <div class="form-group">
+    <label class="scopes" for="scopes">scopes</label>
+    <input type="text" formControlName="scopes" class="scopeInput" required/>
+    </div>
+    <br/>
+    <button type="submit" [disabled]="!employeeForm.valid" class="submitIt" (click)='sendFRMData(this.respondedData)'>Register</button>
+    </form>
+  </div>
+
+  <!-- <div
+  *ngIf="alert"
+  class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+  role="alert"
+>
+  <pre>{{ respondedData }}</pre>
+  <button
+    type="button"
+    class="close"
+    data-dismiss="alert"
+    aria-label="Close"
+    (click)="onClose()"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+
+<div
+*ngIf="alert"
+class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+role="alert"
+>
+<!-- <pre>{{ respondedData }}</pre> -->
+
+<div>
+<pre class="box" id="app" rows="60" cols="60" *ngIf="respondedData">
+
+  {{ respondedData | json }}
+
+</pre>
+
+<button
+type="button"
+class="close"
+data-dismiss="alert"
+aria-label="Close"
+(click)="onClose()"
+>
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+
+</div>

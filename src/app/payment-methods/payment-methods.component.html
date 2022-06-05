@@ -1,0 +1,111 @@
+<div class="paymentMethods">
+
+
+<div class="paymentMethod-text-center">
+<div class="deconstructed">
+   Create Payment Method
+  <div>Create Payment Method</div>
+  <div>Create Payment Method</div>
+  <div>Create Payment Method</div>
+  <div>Create Payment Method</div>
+</div>
+</div>
+
+
+   <form (ngSubmit)="onSubmit()" [formGroup]="employeeForm" class="form">
+   <div class="formContainer">
+   <div class="form-group">
+      <label class="inputText" for="paymentMethodType">paymentMethodType</label>
+      <input type="text" formControlName="paymentMethodType" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+      <label class="inputText" for="paymentType">paymentType</label>
+      <input type="text" formControlName="paymentType" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+      <label class="inputText" for="currency">scope</label>
+      <input type="text" formControlName="currency" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+   <label class="inputText" for="country">country</label>
+   <input type="text" formControlName="country" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+   <label class="inputText" for="beneficiaryType">beneficiaryType</label>
+   <input type="text" formControlName="beneficiaryType" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+   <label class="inputText" for="firstNameOnAccount">firstNameOnAccount</label>
+   <input type="text" formControlName="firstNameOnAccount" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+   <label class="inputText" for="lastNameOnAccount">lastNameOnAccount</label>
+   <input type="text" formControlName="lastNameOnAccount" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+   <label class="inputText" for="accountNumber">accountNumber</label>
+   <input type="text" formControlName="accountNumber" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+   <label class="inputText" for="routingNumber">routingNumber</label>
+   <input type="text" formControlName="routingNumber" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <div class="form-group">
+   <label class="inputText" for="accountType">accountType</label>
+   <input type="text" formControlName="accountType" class="paymentMethodInput" required/>
+   </div>
+   <br/>
+   <button class="submitIt" type="submit" [disabled]="!employeeForm.valid" (click)='sendFRMData(this.respondedData)'>Create</button>
+   </div>   
+   </form>
+
+<!-- <div
+   *ngIf="alert"
+   class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+   role="alert"
+   >
+   <pre>{{ respondedData }}</pre>
+   <button
+     type="button"
+     class="close"
+     data-dismiss="alert"
+     aria-label="Close"
+     (click)="onClose()"
+   >
+     <span aria-hidden="true">&times;</span>
+   </button>
+   </div> -->
+<div
+   *ngIf="alert"
+   class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+   role="alert"
+   >
+   <!-- <pre>{{ respondedData }}</pre> -->
+   <div>
+      <pre class="box" id="app" rows="60" cols="60" *ngIf="respondedData">
+
+{{ respondedData | json }}
+
+</pre>
+
+      <button
+         type="button"
+         class="close"
+         data-dismiss="alert"
+         aria-label="Close"
+         (click)="onClose()"
+         >
+      <span aria-hidden="true">&times;</span>
+      </button>
+   </div>
+
+</div>

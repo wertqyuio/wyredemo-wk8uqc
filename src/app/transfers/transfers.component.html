@@ -1,0 +1,237 @@
+<div class="transfers">
+<header class="masthead">
+  <div class="transfers-container h-100">
+    <div class="row h-100 align-items-center justify-content-center">
+      <div class="col-6">
+
+
+        <div class="transfers-text-center">
+          <div class="deconstructed">
+            Transfer Your Crypto/Fiat
+            <div>Transfer Your Crypto/Fiat</div>
+            <div>Transfer Your Crypto/Fiat</div>
+            <div>Transfer Your Crypto/Fiat</div>
+            <div>Transfer Your Crypto/Fiat</div>
+          </div>
+        </div>
+
+
+
+        <form #send="ngForm" (ngSubmit)="sendFRMData(send.value)">
+        <div class="formContainer">
+          <div class="form-group">
+            <label for="source" class="text-muted">Source</label>
+            <input
+              type="text"
+              class="form-control"
+              id="source"
+              name="sourcefrm"
+              placeholder="account:AC_HTQM9T3ZR3W"
+              ngModel
+              #title="ngModel"
+              required
+            />
+            <span
+              class="help-block text-danger"
+              *ngIf="!title.valid && title.touched"
+              ></span
+            >
+          </div>
+          <br/>
+          <div class="form-group">
+          <label for="sourceCurrency" class="text-muted">sourceCurrency</label>
+          <input
+            type="text"
+            class="form-control"
+            id="sourceCurrency"
+            placeholder="BTC"
+            name="sourceCurrencyfrm"
+            ngModel
+            #title="ngModel"
+            required
+          />
+          <span
+            class="help-block text-danger"
+            *ngIf="!title.valid && title.touched"
+            ></span
+          >
+        </div>
+        <br/>
+        <div class="form-group">
+        <label for="sourceAmount" class="text-muted">sourceAmount</label>
+        <input
+          type="text"
+          class="form-control"
+          id="sourceAmount"
+          placeholder="0.00001"
+          name="sourceAmountfrm"
+          ngModel
+          #title="ngModel"
+          required
+        />
+        <span
+          class="help-block text-danger"
+          *ngIf="!title.valid && title.touched"
+          ></span
+        >
+      </div>
+      <br/>
+          <div class="form-group">
+            <label for="destCurrency" class="text-muted">destCurrency</label>
+            <input
+              type="text"
+              class="form-control"
+              id="destCurrency"
+              placeholder="ETH"
+              name="destCurrencyfrm"
+              ngModel
+              #body="ngModel"
+              required
+            />
+            <span
+              class="help-block text-danger"
+              *ngIf="!body.valid && body.touched"
+              ></span
+            >
+          </div>
+          <br/>
+          <div class="form-group">
+            <label for="dest" class="text-muted">dest</label>
+            <input
+              type="text"
+              class="form-control"
+              id="dest"
+              placeholder="ethereum:0x5d349ec1fb2cdd68b750fe48a0f7c6d989c71c98"
+              name="destfrm"
+              ngModel
+              #userid="ngModel"
+              required
+            />
+            <span
+              class="help-block text-danger"
+              *ngIf="!userid.valid && userid.touched"
+              ></span
+            >
+          </div>
+          <br/>
+          <div class="form-group">
+          <label for="autoConfirm" class="text-muted">autoConfirm</label>
+          <input
+            type="text"
+            class="form-control"
+            id="autoConfirm"
+            placeholder="TRUE"
+            name="autoConfirmfrm"
+            ngModel
+            #userid="ngModel"
+            required
+          />
+          <span
+            class="help-block text-danger"
+            *ngIf="!userid.valid && userid.touched"
+            ></span
+          >
+        </div>
+      </div>
+          <div class="row">
+            <div *ngIf="submitBtn" class="col-sm-6">
+              <input
+                class="submitIt form-control btn btn-success"
+                type="submit"
+                [disabled]="!send.valid"
+              />
+            </div>
+            <div *ngIf="editBtn" class="col-sm-6">
+              <input
+                class="form-control btn btn-success"
+                type="button"
+                value="EDIT DATA"
+                [disabled]="!send.valid"
+                (click)="onEditUser(send.value)"
+              />
+            </div>
+            <!-- <div class="col-sm-6">
+              <input
+                class="form-control btn btn-info"
+                type="button"
+                value="EDIT"
+                (click)="onEdit()"
+              />
+            </div> -->
+          </div>
+        </form>
+        <div
+          *ngIf="alert"
+          class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+          role="alert"
+        >
+          <!-- <pre>{{ respondedData }}</pre> -->
+
+          <div>
+            <pre class="box" id="app" rows="60" cols="60" *ngIf="respondedData">
+
+              {{ respondedData | json }}
+
+            </pre>
+
+            <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+            (click)="onClose()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+         </div>
+
+  
+        </div>
+        <div
+          *ngIf="userId"
+          class="alert alert-warning alert-dismissible fade show edit w-100 h-50"
+          role="alert"
+        >
+          <div class="row">
+            <div class="col-sm-12">
+              <form
+                #getdataFrm="ngForm"
+                (ngSubmit)="getdata(getdataFrm.value)"
+              >
+                <div class="form-group">
+                  <label for="title" class="text-muted">Id</label>
+                  <input
+                    type="text"
+                    name="id"
+                    id="title"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+
+                <input
+                  type="submit"
+                  class="btn btn-info btn-block"
+                  value="Get Data"
+                />
+              </form>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+            (click)="onEditClose()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div>
+  <div></div>
+</div>
+</div>

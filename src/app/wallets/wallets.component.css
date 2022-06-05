@@ -1,0 +1,171 @@
+.wallets{
+  position: absolute;
+  top: 34rem;
+  left: 39rem;
+}
+
+p {
+  font-family: Lato;
+}
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+.alrt{
+  background-color: ghostwhite;
+  border: 1px solid silver;
+  padding: 10px 20px;
+  border-radius: 4px;
+  width: 38rem;
+  height: 20rem;
+  overflow: auto;
+  top: 22rem;
+  left: -5rem;
+  position: absolute;
+}
+.edit{
+      position: absolute;
+    top: 30%;
+    opacity: .9;
+}
+
+/* .entirePage{
+	background-image: url('https://symbols.getvecta.com/stencil_101/94_wyre-icon.c317892e2d.svg');
+} */
+
+.close{
+  left: 37rem;
+  position: absolute;
+  top: 1rem;
+}
+
+.wallets-text-center{
+  transform: skewY(-10deg);
+  color: rgb(0, 0, 0);
+  text-shadow: 
+    -1px -1px 0 rgb(0, 0, 0),
+    -2px -2px 0 rgb(0, 0, 0),
+    -3px -3px 0 rgb(0, 0, 0),
+    -4px -4px 0 rgb(0, 0, 0),
+    -5px -5px 0 rgb(0, 0, 0),
+    -6px -6px 0 rgb(255, 255, 255),
+    -7px -7px 0 rgb(255, 255, 255),
+    -8px -8px 0 rgb(255, 255, 255),
+    -30px 20px 40px rgb(0, 0, 0)
+}
+
+.wallets-container{
+
+  position: absolute;
+  top: 5rem;
+  left: 11rem;
+
+}
+
+.text-muted{
+  font-weight: bold;
+  color: black;
+  font-size: 1.4em;
+  position: absolute;
+  left: 2rem;
+  width: 9rem;
+
+}
+
+.form-control{
+  position: absolute;
+  right: 4rem;
+  /* display: table-caption; */
+  /* height: 50px; */
+  /* width: 100%; */
+  background-color: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  /* padding: 0 10px; */
+  /* margin-top: 8px; */
+  font-size: 14px;
+  font-weight: 300;
+} 
+
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.deconstructed {
+  position: absolute;
+  margin: auto;
+  height: 4rem;
+  width: 45rem;
+  color: transparent;
+  font-family: 'Cambay', sans-serif;
+  font-size: 3vw;
+  top: -7rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.03em;
+
+
+}
+
+.deconstructed > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffff64;
+  pointer-events: none;
+}
+
+
+.formContainer{
+  height: 15rem;
+  width: 400px;
+  background-color: rgba(255,255,255,0.13);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 9rem;
+  left: 10rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgb(8 7 16 / 60%);
+  padding: 50px 35px;
+}
+
+.formContainer *{
+
+  font-family: "Consolas";
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+.submitIt{
+  position: absolute;
+    left: -3rem;
+    width: 6rem;
+    top: 18rem;
+    cursor:pointer;
+    font-family: "Consolas";
+
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+
+}
+
+
+
+
+

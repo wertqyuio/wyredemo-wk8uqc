@@ -1,0 +1,71 @@
+<div class="buyCrypto">
+  <div class="wrapper">
+    <button (click)="getCheckoutWidget()">
+      Buy Crypto
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+
+    <div
+*ngIf="alert"
+class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+role="alert"
+>
+  <div class="response">
+      <pre class="box" id="app" rows="30" cols="30" *ngIf="displayResults">
+      
+
+
+      </pre>
+      
+      <span
+      type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-label="Close"
+      (click)="onClose()"
+      >
+      <span aria-hidden="true">&times;</span>
+      </span>
+      </div>
+   </div>
+
+    <strong class="buy">
+
+    <div
+    *ngIf="alert"
+    class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+    role="alert"
+    >
+      <div class="response">
+          <pre class="box" id="app" rows="60" cols="60" *ngIf="displayResults">
+          
+            <div class="lunchin">
+              <div class="longUrl">
+              <a class="hero glitch layers" data-text="WYRE" href="{{ this.finalersult3}}" target="_blank"><span class="journey">Start<br> the <br> Journey</span></a>
+              </div>
+            </div>
+          
+          </pre>
+          
+          <span
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+          (click)="onClose()"
+          >
+          <span aria-hidden="true">&times;</span>
+          </span>
+          </div>
+       </div>
+
+
+
+    </strong>
+
+  </div>
+</div>

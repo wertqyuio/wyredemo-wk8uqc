@@ -1,0 +1,49 @@
+<div class="getTransfers">
+<div class="rates-text-center">
+</div>
+
+
+
+<div class="wrapper">
+<button (click)="getData()" class="getIt">
+  Get Transfers
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</div>
+
+<!-- <div class="response" >
+<textarea class="box" id="app" rows="14" cols="40" *ngIf="res">{{ res | json }}
+
+</textarea>
+</div> -->
+<div
+*ngIf="alert"
+class="alert alert-warning alert-dismissible fade show alrt w-100 h-50"
+role="alert"
+>
+  <div class="response">
+  <pre class="box" id="app" rows="60" cols="60" *ngIf="res">
+  
+    {{ res | json }}
+  
+  </pre>
+  
+  <span
+  type="button"
+  class="close"
+  data-dismiss="alert"
+  aria-label="Close"
+  (click)="onClose()"
+  >
+  <span aria-hidden="true">&times;</span>
+  </span>
+  </div>
+</div>
+
+<div *ngIf="err">{{ err | json }}</div>
+
+</div>
+
